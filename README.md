@@ -53,4 +53,3 @@ docker compose down
 | GET | `/api/feedback/reviews/summary/` | средняя оценка и число отзывов |
 | GET | `/api/schema/` | OpenAPI-схема |
 
-Небезопасные запросы (POST, PATCH) требуют заголовок `X-CSRFToken` со значением cookie `csrftoken`.
