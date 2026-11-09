@@ -1,0 +1,187 @@
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(28px, 5vw, 80px);
+  align-items: start;
+}
+
+.gallery {
+  position: relative;
+  border: 1px solid var(--c-line);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: clamp(24px, 2.8vw, 38px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  margin: 0;
+  background: var(--c-line);
+  border: 1px solid var(--c-line);
+}
+
+.meta > div {
+  padding: 12px 14px;
+  background: var(--c-white);
+}
+
+.meta dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-steel);
+}
+
+.meta dd {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.inStock {
+  color: var(--c-accent-deep);
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: var(--c-cloud);
+}
+
+.buyActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.buyActions > div {
+  height: 60px;
+}
+
+.buyLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.buyLinks > * {
+  font-size: 12px;
+}
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: var(--c-slate);
+}
+
+.perks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perks svg {
+  flex: none;
+  color: var(--c-accent);
+}
+
+.details {
+  margin-top: clamp(48px, 6vw, 80px);
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.tab {
+  position: relative;
+  padding: 0 0 16px;
+  border: 0;
+  background: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--c-steel);
+}
+
+.tab[aria-selected="true"] {
+  color: var(--c-ink);
+}
+
+.tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 2px;
+  background: var(--c-accent);
+}
+
+.panel {
+  padding-top: 32px;
+}
+
+.requirements {
+  max-width: 820px;
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--c-accent);
+  background: var(--c-cloud);
+}
+
+.requirements p {
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.specs {
+  width: 100%;
+  max-width: 820px;
+  border-collapse: collapse;
+}
+
+.specs th,
+.specs td {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--c-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.specs th {
+  width: 45%;
+  padding-right: 24px;
+  font-weight: 500;
+  color: var(--c-steel);
+}
+
+.related {
+  margin-top: clamp(56px, 7vw, 96px);
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}

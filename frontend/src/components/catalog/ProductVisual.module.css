@@ -1,0 +1,66 @@
+.visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background:
+    linear-gradient(var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--c-line) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--c-cloud);
+  background-blend-mode: normal;
+}
+
+.visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 30%, var(--c-cloud) 78%);
+  pointer-events: none;
+}
+
+.large {
+  aspect-ratio: 1 / 1;
+}
+
+.drawing {
+  position: relative;
+  z-index: 1;
+  width: 62%;
+  height: auto;
+  fill: none;
+  stroke: var(--c-slate);
+  stroke-width: 2.4;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  transition: transform 0.5s var(--ease);
+}
+
+.accent {
+  stroke: var(--c-accent);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.studio {
+  background: #eef3f5;
+}
+
+.studio::after {
+  display: none;
+}
+
+.render {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.studio .render {
+  overflow: visible;
+}

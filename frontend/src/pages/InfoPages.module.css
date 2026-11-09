@@ -1,0 +1,150 @@
+.steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 clamp(40px, 5vw, 64px);
+  padding: 0;
+  list-style: none;
+}
+
+.step,
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--c-white);
+}
+
+.stepIndex {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--c-accent);
+}
+
+.stepIcon {
+  color: var(--c-ink);
+}
+
+.stepTitle {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.cardValue {
+  margin-top: 12px;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.body {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.cta {
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  margin-bottom: clamp(40px, 5vw, 64px);
+  background: var(--c-line);
+  border: 1px solid var(--c-line);
+}
+
+.panel {
+  padding: clamp(24px, 4vw, 48px);
+  background: var(--c-cloud);
+}
+
+.panelDark {
+  background: var(--c-ink);
+  color: var(--c-white);
+}
+
+.panelTitle {
+  margin-bottom: 24px;
+  font-size: clamp(20px, 2vw, 26px);
+  text-transform: uppercase;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist li {
+  display: flex;
+  gap: 12px;
+}
+
+.checklist svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--c-accent);
+}
+
+.panelDark .checklist svg {
+  color: #ff8a80;
+}
+
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--c-ink);
+  color: var(--c-white);
+}
+
+.stripTitle {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+}
+
+.stripLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.stripLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.stripLinks a:hover {
+  color: var(--c-accent);
+}
+
+@media (max-width: 960px) {
+  .steps,
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

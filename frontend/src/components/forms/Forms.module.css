@@ -1,0 +1,88 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dark label,
+.dark legend {
+  color: var(--c-mist);
+}
+
+.dark input:not([type="checkbox"]),
+.dark textarea {
+  border-color: var(--c-ink-3);
+  background: var(--c-ink-2);
+  color: var(--c-white);
+}
+
+.dark input:not([type="checkbox"]):focus,
+.dark textarea:focus {
+  border-color: var(--c-accent);
+}
+
+.dark a {
+  color: var(--c-white);
+}
+
+.inline {
+  display: flex;
+  gap: 0;
+}
+
+.inline > div {
+  flex: 1;
+}
+
+.inline input {
+  border-right: 0;
+}
+
+.stars {
+  display: flex;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.stars legend {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-slate);
+}
+
+.star {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--c-line);
+  color: var(--c-mist);
+  cursor: pointer;
+}
+
+.star input {
+  position: absolute;
+  opacity: 0;
+}
+
+.star:has(input:focus-visible) {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+.starActive {
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+}

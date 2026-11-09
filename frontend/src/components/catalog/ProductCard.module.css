@@ -1,0 +1,139 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--c-white);
+  transition: box-shadow 0.3s var(--ease);
+}
+
+.card:hover {
+  z-index: 1;
+  box-shadow: 0 16px 40px rgb(21 27 30 / 10%);
+}
+
+.card:hover svg[data-motif],
+.card:hover svg[data-visual] {
+  transform: scale(1.05);
+}
+
+.media {
+  display: block;
+}
+
+.badges {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badge {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accent {
+  background: var(--c-accent);
+  color: var(--c-white);
+}
+
+.dark {
+  background: var(--c-ink);
+  color: var(--c-white);
+}
+
+.light {
+  background: var(--c-white);
+  color: var(--c-danger);
+  box-shadow: inset 0 0 0 1px var(--c-line);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 22px 22px;
+}
+
+.category {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-steel);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.title a:hover {
+  color: var(--c-accent-deep);
+}
+
+.sku {
+  font-size: 13px;
+  color: var(--c-steel);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.current {
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.onRequest {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--c-slate);
+}
+
+.old {
+  font-size: 13px;
+  color: var(--c-steel);
+}
+
+.priceLarge .current {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.priceLarge .onRequest {
+  font-size: 24px;
+}
+
+.priceLarge .old {
+  font-size: 16px;
+}

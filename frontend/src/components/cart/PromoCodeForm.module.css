@@ -1,0 +1,23 @@
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0;
+}
+
+.form > button {
+  margin-top: 26px;
+  border-left: 0;
+}
+
+.applied {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--c-accent);
+  background: var(--c-accent-soft);
+  font-size: 14px;
+}

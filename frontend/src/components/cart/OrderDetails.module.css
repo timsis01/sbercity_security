@@ -1,0 +1,91 @@
+.details {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table th,
+.table td {
+  padding: 14px 12px 14px 0;
+  border-bottom: 1px solid var(--c-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-steel);
+  border-bottom: 2px solid var(--c-ink);
+}
+
+.table td:not(:first-child),
+.table th:last-child {
+  white-space: nowrap;
+}
+
+.table tbody a:hover {
+  color: var(--c-accent-deep);
+}
+
+.table tfoot th {
+  font-weight: 500;
+  color: var(--c-slate);
+  text-align: right;
+}
+
+.total th,
+.total td {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c-ink);
+  border-bottom: 0;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 24px;
+  background: var(--c-cloud);
+}
+
+.facts > div {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.facts > div:last-child {
+  border-bottom: 0;
+}
+
+.facts dt {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-steel);
+}
+
+.facts dd {
+  margin: 4px 0 0;
+}
+
+@media (max-width: 900px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+}

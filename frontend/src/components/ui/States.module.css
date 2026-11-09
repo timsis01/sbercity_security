@@ -1,0 +1,44 @@
+.loader {
+  position: relative;
+  height: 2px;
+  margin: 48px 0;
+  overflow: hidden;
+  background: var(--c-line);
+}
+
+.bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 30%;
+  background: var(--c-accent);
+  animation: slide 1.1s var(--ease) infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(340%);
+  }
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 40px;
+  border: 1px solid var(--c-line);
+  background: var(--c-cloud);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text {
+  max-width: 560px;
+  color: var(--c-slate);
+}

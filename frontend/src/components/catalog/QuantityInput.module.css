@@ -1,0 +1,47 @@
+.wrap {
+  display: inline-flex;
+  align-items: stretch;
+  height: 44px;
+  border: 1px solid var(--c-line);
+  background: var(--c-white);
+}
+
+.step {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  border: 0;
+  background: none;
+  color: var(--c-slate);
+}
+
+.step:hover:not(:disabled) {
+  color: var(--c-ink);
+  background: var(--c-cloud);
+}
+
+.step:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.input {
+  width: 52px;
+  border: 0;
+  border-inline: 1px solid var(--c-line);
+  text-align: center;
+  font-weight: 600;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.input:focus {
+  outline: none;
+  background: var(--c-cloud);
+}

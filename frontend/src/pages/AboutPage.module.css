@@ -1,0 +1,141 @@
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 80px);
+  padding-bottom: clamp(16px, 3vw, 32px);
+}
+
+.introLead {
+  font-size: clamp(22px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.capabilities {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 200px;
+  padding: 28px;
+  background: var(--c-white);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.capability svg {
+  color: var(--c-accent);
+}
+
+.partnersSection {
+  padding-bottom: var(--section-y);
+}
+
+.partners {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.partner {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  padding: 20px;
+  background: var(--c-white);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--c-slate);
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+
+.rating {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.ratingValue {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--c-line);
+}
+
+.review {
+  padding: 24px;
+  background: var(--c-white);
+}
+
+.reviewHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stars {
+  display: inline-flex;
+  color: var(--c-accent);
+}
+
+.reviewForm {
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--c-white);
+}
+
+.formTitle {
+  margin-bottom: 24px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .capabilities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partners {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .intro,
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .capabilities,
+  .partners {
+    grid-template-columns: 1fr 1fr;
+  }
+}

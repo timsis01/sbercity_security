@@ -1,0 +1,55 @@
+[project]
+name = "sbercity-security-backend"
+version = "1.0.0"
+description = "Бэкенд интернет-магазина «СберСити — безопасность»"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "unit: модульные тесты без базы данных",
+    "integration: интеграционные тесты API с базой данных",
+]
+filterwarnings = ["ignore::DeprecationWarning", "ignore:No directory at:UserWarning"]
+
+[tool.coverage.run]
+source = ["apps", "config"]
+omit = ["*/migrations/*", "config/asgi.py", "config/wsgi.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.mypy]
+python_version = "3.13"
+plugins = ["mypy_django_plugin.main", "mypy_drf_plugin.main"]
+strict = true
+disallow_subclassing_any = false
+warn_unused_ignores = true
+exclude = ["migrations/", "\\.venv/"]
+
+[[tool.mypy.overrides]]
+module = ["django_filters.*", "drf_spectacular.*", "whitenoise.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["tests.factories", "apps.core.schema"]
+disallow_untyped_calls = false
+
+[tool.django-stubs]
+django_settings_module = "config.settings"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+extend-exclude = ["migrations"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "D", "ANN", "ERA", "SIM", "RUF"]
+ignore = ["D203", "D213", "ANN401", "RUF001", "RUF002", "RUF003", "RUF012"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

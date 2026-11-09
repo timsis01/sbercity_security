@@ -1,0 +1,32 @@
+.nav {
+  font-size: 13px;
+  color: var(--c-steel);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.item + .item::before {
+  content: "/";
+  color: var(--c-mist);
+}
+
+.link:hover {
+  color: var(--c-ink);
+}
+
+.item span[aria-current] {
+  color: var(--c-slate);
+}
